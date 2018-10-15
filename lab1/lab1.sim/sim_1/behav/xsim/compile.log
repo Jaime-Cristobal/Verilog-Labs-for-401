@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/IFM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/IF_IDLatch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_IDLatch
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/IM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/InstrucMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrucMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/MUX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/IFMTest.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFMTest

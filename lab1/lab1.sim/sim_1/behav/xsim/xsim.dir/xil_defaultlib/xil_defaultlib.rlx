@@ -1,0 +1,12 @@
+0.6
+2018.2
+Jul 26 2018
+19:36:16
+C:/Users/Seacow/Desktop/lab1/lab1/lab1.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
+C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/IFM.v,1539412177,verilog,,C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/IF_IDLatch.v,,IFM,,,,,,,,
+,,,,,,IFMTest,,,,,,,,
+C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/IF_IDLatch.v,1539217579,verilog,,C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/IM.v,,IF_IDLatch,,,,,,,,
+C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/IM.v,1539217579,verilog,,C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/InstrucMem.v,,IM,,,,,,,,
+C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/InstrucMem.v,1539217579,verilog,,C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/MUX.v,,InstrucMem,,,,,,,,
+C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/MUX.v,1539217579,verilog,,C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/PC.v,,MUX,,,,,,,,
+C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/PC.v,1539217579,verilog,,C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/IFMTest.v,,PC,,,,,,,,
