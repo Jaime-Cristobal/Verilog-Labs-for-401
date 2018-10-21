@@ -3,7 +3,7 @@
 /**Lab2 */
 
 module Control (
-    input wire [5:0] opcode,
+    input wire [5:0] opcode,        //was previously 8 6 bit [5:0] but changed to 9 [8:0]
     output reg [3:0] EX,
     output reg [2:0] M,
     output reg [1:0] WB
@@ -22,13 +22,14 @@ module Control (
         end
         
         /* Don't care conditions (X) assigned to high impedence (Z) */
-        always @* begin
+        //always @* begin
+        always @(opcode) begin
             case(opcode)
                 RTYPE: 
                     begin
-                        EX <= 4'b1100;
-                        M <= 3'b000;
-                        WB <= 2'b10;
+                        EX <= 4'b1100;      //inferring latch
+                        M <= 3'b000;        //inferring latch
+                        WB <= 2'b10;        //.........
                     end
                 LW:
                     begin

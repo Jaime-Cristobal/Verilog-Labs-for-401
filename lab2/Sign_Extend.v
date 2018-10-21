@@ -3,13 +3,13 @@
 /**Lab2 */
 
 module Sign_Extend (
-    input wire [15:0] nextend,
+    input wire [15:0] nextend,      //unconnected port
     output reg [31:0] extend
     );
     
         always @* begin
             //replicate signed bit 16 times then cancatinate
-            extend = {16{1'b0}};
+            extend = {16{nextend}};
         end
     
 endmodule

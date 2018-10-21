@@ -4,9 +4,9 @@
 
 module Register (
     input [4:0] rs,
-    input [4:0] rt,
+    input [4:0] rt, //unconnected port
     input [4:0] rd,
-    input [31:0] writedata,
+    input [31:0] writedata,     //unconnected port
     input regwrite,
     output reg [31:0] A,
     output reg [31:0] B
@@ -34,11 +34,11 @@ module Register (
         //Assign output with REG
         always @* begin
             A <= REG[rs];
-            B <= REG[rs];
+            B <= REG[rt];
             if(rd != 0 && regwrite)
             begin
-               A <= REG[rd];
-               B <= REG[rd]; 
+                A <= writedata[rd];
+                B <= writedata[rd];
             end
         end
         

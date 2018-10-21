@@ -3,16 +3,16 @@
 /**Lab2 */
 
 module I_Decode(
-    input wire [31:0] IF_ID_instrout,
+    input wire [31:0] IF_ID_instrout,       //unconnected port
     input wire [31:0] IF_ID_npcout,
     input wire [4:0] MEM_WB_rd,
     input wire MEM_WB_regwrite,
-    input wire [31:0] WB_mux5_writedata,
+    input wire [31:0] WB_mux5_writedata,    //unconnected port
     output wire [1:0] wb_ctlout,
     output wire [2:0] m_ctlout,
     output wire regdst, alusrc,
     output wire [1:0] aluop,
-    output wire [31:0] npcout, rdata1out, rdata2out, s_extendout,
+    output wire [31:0] npcout, rdata1out, rdata2out, s_extendout,       //both radatas and s_extendout are driven by constant 0
     output wire [4:0] instrout_2016, instrout_1511
     );
         //signals

@@ -1,6 +1,8 @@
 `timescale 1ns / 1ps
 
-/**Lab2 */
+/**Lab2 
+    clk is provided from the test bench but 8 arguments are passed to Register
+    which only accepts 7.*/
 
 module Test_Register();
 
@@ -34,7 +36,7 @@ module Test_Register();
     
     Register reg1 (rdata1,          //read data 1 output -> output A
                    rdata2,          //read data 2 output -> output B
-                   //clk,             //clock
+                   clk,             //clock -> ????????????
                    wreg,            //write register input -> input regwrite
                    wdata,           //write data input -> input writedata
                    rreg1[25:21],    //read register 1 input -> input rs 

@@ -5,7 +5,7 @@
 module ID_Extend(
     input wire [1:0] ctlwb_out,
     input wire [2:0] ctlm_out,
-    input wire [3:0] ctlex_out,
+    input wire [3:0] ctlex_out,    //unconnected port
     input wire [31:0] npc, readdat1, readdat2, signext_out,
     input wire [4:0] instr_2016, instr_1511,
     output reg [1:0] wb_ctlout,
@@ -33,7 +33,7 @@ module ID_Extend(
             #1
             wb_ctlout <= ctlwb_out;
             m_ctlout <= ctlm_out;
-            regdst <= ctlex_out;
+            regdst <= ctlex_out;     //ctlex_out[2] and ctlex_out[3] were unconnected ports
             aluop <= ctlex_out;
             alusrc <= ctlex_out;
             npcout <= npc;
