@@ -22,8 +22,8 @@ module Control (
         end
         
         /* Don't care conditions (X) assigned to high impedence (Z) */
-        //always @* begin
-        always @(opcode) begin
+        always @* begin
+        //always @(opcode) begin
             case(opcode)
                 RTYPE: 
                     begin
@@ -55,7 +55,12 @@ module Control (
                         M <= {3{1'b0}}; 
                         WB <= {2{1'b0}};
                     end
-                default: $display ("Opcode not recognized.");
+                default: begin
+                    $display ("Opcode not recognized.");
+                    EX <= 0;
+                    M <= 0;
+                    WB <= 0;
+                end
              endcase
          end
          

@@ -3,11 +3,11 @@
 /**Lab2 */
 
 module Register (
-    input [4:0] rs,
-    input [4:0] rt, //unconnected port
+    input [4:0] rs,     //unconnected port
+    input [4:0] rt,     //unconnected port
     input [4:0] rd,
-    input [31:0] writedata,     //unconnected port
-    input regwrite,
+    input [31:0] writedata,
+    input regwrite, clk,
     output reg [31:0] A,
     output reg [31:0] B
     );
@@ -33,13 +33,25 @@ module Register (
         
         //Assign output with REG
         always @* begin
+        //always @ (rs or rt or rd or writedata or regwrite) begin
+            //for(i = 0; i < 32; i = i + 1)   //recently added
+            //    REG[i] <= regwrite;         //but could be wrong
+        
             A <= REG[rs];
             B <= REG[rt];
+            
             if(rd != 0 && regwrite)
-            begin
-                A <= writedata[rd];
-                B <= writedata[rd];
-            end
+                for(i = 0; i < 32; i = i + 1)
+                    REG[i] <= writedata[rd];
+            else
+                for(i = 0; i < 32; i = i + 1)
+                    REG[i] <= 0;
+                //A <= writedata[rd];
+                //B <= writedata[rd];
+            //else begin
+            //    A <= REG[rs];
+            //    B <= REG[rt];
+            //end
         end
         
 endmodule

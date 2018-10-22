@@ -34,13 +34,24 @@ module Test_Register();
         #1 register[8] <= 'h12012345;
     end
     
+    /*
     Register reg1 (rdata1,          //read data 1 output -> output A
                    rdata2,          //read data 2 output -> output B
                    clk,             //clock -> ????????????
-                   wreg,            //write register input -> input regwrite
+                   wreg,            //write register input -> input rd
                    wdata,           //write data input -> input writedata
                    rreg1[25:21],    //read register 1 input -> input rs 
                    rreg2[20:16],    //read reg 2 input -> input rt
-                   reg_write);      //RegWrite control line from MEM/WB -> to Register
+                   reg_write);      //RegWrite control line from MEM/WB -> to regwrite
+    */
+                   
+    Register reg1 (rreg1[25:21],
+                   rreg2[20:16],
+                   wreg,
+                   wdata,
+                   reg_write,
+                   clk,
+                   rdata1,
+                   rdata2);
     
 endmodule
