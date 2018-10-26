@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Sat Oct  6 14:36:07 2018
+# Process ID: 1260
+# Current directory: C:/Users/Seacow/Desktop/lab1/lab1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8180 C:\Users\Seacow\Desktop\lab1\lab1\lab1.xpr
+# Log file: C:/Users/Seacow/Desktop/lab1/lab1/vivado.log
+# Journal file: C:/Users/Seacow/Desktop/lab1/lab1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Seacow/Desktop/lab1/lab1/lab1.xpr
+update_compile_order -fileset sources_1
+close [ open C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/InstrucMem.v w ]
+add_files C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/InstrucMem.v
+update_compile_order -fileset sources_1
+close [ open C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/IFM.v w ]
+add_files C:/Users/Seacow/Desktop/lab1/lab1/lab1.srcs/sources_1/new/IFM.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

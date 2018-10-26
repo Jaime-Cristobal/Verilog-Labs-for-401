@@ -5,7 +5,11 @@
 module Test_Control();
 
     wire [8:0] controls;
+<<<<<<< HEAD
     reg [31:0] instr;       
+=======
+    reg [31:0] instr;       // was reg but changed to output only
+>>>>>>> 5e02ae41d5b41ec445582b81c63817709aaf9481
     
     initial begin
         instr[31:26] <= 6'b000000;
@@ -22,6 +26,10 @@ module Test_Control();
         #1 instr[31:26] = 0;
     end
     
+<<<<<<< HEAD
     Control control1(instr[31:26], controls);   
+=======
+    Control control1(instr[31:26], controls);   //reg instr cannot be drive as an concurrent assignment
+>>>>>>> 5e02ae41d5b41ec445582b81c63817709aaf9481
 
 endmodule

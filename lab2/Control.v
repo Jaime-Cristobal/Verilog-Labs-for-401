@@ -23,12 +23,22 @@ module Control (
         
         /* Don't care conditions (X) assigned to high impedence (Z) */
         always @* begin
+<<<<<<< HEAD
             case(opcode)
                 RTYPE: 
                     begin
                         EX <= 4'b1100;
                         M <= 3'b000;
                         WB <= 2'b10;
+=======
+        //always @(opcode) begin
+            case(opcode)
+                RTYPE: 
+                    begin
+                        EX <= 4'b1100;      //inferring latch
+                        M <= 3'b000;        //inferring latch
+                        WB <= 2'b10;        //.........
+>>>>>>> 5e02ae41d5b41ec445582b81c63817709aaf9481
                     end
                 LW:
                     begin
@@ -56,6 +66,12 @@ module Control (
                     end
                 default: begin
                     $display ("Opcode not recognized.");
+<<<<<<< HEAD
+=======
+                    EX <= 0;
+                    M <= 0;
+                    WB <= 0;
+>>>>>>> 5e02ae41d5b41ec445582b81c63817709aaf9481
                 end
              endcase
          end
