@@ -34,6 +34,7 @@ module test_alu();
         $finish;
     end
     
-    ALU ALU3(result, zero, A, B, control);
+    //ALU ALU3(result, zero, A, B, control);
+    ALU ALU3(A, B, control, result, zero);
 
 endmodule

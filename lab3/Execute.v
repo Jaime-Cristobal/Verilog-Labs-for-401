@@ -22,22 +22,21 @@ module Execute(
     wire aluzero;
     
     //instantiations
-    //use fig 3.1 to wire
-    
     adder add3 (.add_in1(),         //??
                 .add_in2(),         //??
                 .add_out(adder_out));
     
-    MUX3 mux3 (.y(five_bit_muxout),
+    MUX3 mux3 (.y(muxout),
                .a(instrout_2016),      //check
-               .b(instrout_1511));     //check
+               .b(instrout_1511),      //check
+               .sel());     //check
                
     ALU_Control alu_control3 (.funct(),         //??
                               .aluop(aluop),
                               .select(control));        //check
                               
     ALU alu3 (.a(rdata1), 
-              .b(rdata2), 
+              .b(muxout), 
               .control(control), 
               .result(alu_result), 
               .zero(zero));

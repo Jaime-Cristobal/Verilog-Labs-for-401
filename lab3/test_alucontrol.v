@@ -9,7 +9,7 @@ module test_alucontrol();
     reg [1:0] alu_op;
     reg [5:0] funct;
     
-    ALU_Control alucontroll3 (select, alu_op, funct, );
+    ALU_Control alucontroll3 (funct, alu_op, select);
     
     initial begin
         alu_op = 2'b00;
