@@ -7,11 +7,7 @@ module I_Decode(
     input wire [31:0] IF_ID_npcout,
     input wire [4:0] MEM_WB_rd,
     input wire MEM_WB_regwrite,
-<<<<<<< HEAD
     input wire [31:0] WB_mux5_writedata,
-=======
-    input wire [31:0] WB_mux5_writedata,    //unconnected port
->>>>>>> 5e02ae41d5b41ec445582b81c63817709aaf9481
     
     //input wire [3:0] ctlex_out,
     //input wire [2:0] ctlm_out,
