@@ -22,11 +22,11 @@ module ALU(
         result <= 0;
     always@* begin
         case (control)
-            ALUadd: result = a + b;
-            ALUsub: result = a - b;
-            ALUand: result = a && b;
-            ALUor:  result = a || b;
-            ALUslt: result = a < b ? 1 - sign_mismatch : 0 + sign_mismatch;
+            ALUadd: result <= a + b;
+            ALUsub: result <= a - b;
+            ALUand: result <= a && b;
+            ALUor:  result <= a || b;
+            ALUslt: result <= a < b ? 1 - sign_mismatch : 0 + sign_mismatch;
             default:
                 result = 32'bx; //control = ALUx | *
         endcase

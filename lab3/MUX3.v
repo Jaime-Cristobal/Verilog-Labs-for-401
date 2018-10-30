@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module MUX3 #(parameter BITS = 5)(
+module MUX3 #(parameter BITS = 32)(
     output wire [BITS-1:0] y,      //output of mux
     input wire [BITS-1:0] a, b,    //input 1 of mux
     

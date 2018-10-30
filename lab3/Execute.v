@@ -22,16 +22,16 @@ module Execute(
     wire aluzero;
     
     //instantiations
-    adder add3 (.add_in1(),         //??
-                .add_in2(),         //??
+    adder add3 (.add_in1(npcout),              //??
+                .add_in2(s_extendout),         //??
                 .add_out(adder_out));
     
     MUX3 mux3 (.y(muxout),
-               .a(instrout_2016),      //check
-               .b(instrout_1511),      //check
-               .sel());     //check
+               .a(instrout_1511),      //check
+               .b(instrout_2016),      //check
+               .sel(alutsrc));     //check
                
-    ALU_Control alu_control3 (.funct(),         //??
+    ALU_Control alu_control3 (.funct(s_extendout),         //??
                               .aluop(aluop),
                               .select(control));        //check
                               
@@ -46,13 +46,13 @@ module Execute(
                     .adder_out(adder_out), 
                     .aluzero(aluzero), 
                     .aluout(aluout), 
-                    .readdat2(),            //??
+                    .readdat2(rdata2),            //??
                     .muxout(muxout),
                     .wb_ctlout(wb_ctlout),
                     .branch(branch),
                     .memread(memread),
                     .memwrite(memwrite),
-                    .add_result(),         //??
+                    .add_result(EX_MEM_NPC),         //??
                     .zero(zero),
                     .alu_result(alu_result),
                     .rdata2out(rdata2out),
