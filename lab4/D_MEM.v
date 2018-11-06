@@ -42,6 +42,7 @@ module D_MEM(
         if(memwrite == 1'b1) begin      //copy contents if mem is 1
             DMEM[addr] <= write_data;
         end
+
         if(memread == 1'b1) begin   //checks for a valid address and read memory
             read_data <= DMEM[addr];    //in the memread address
         end

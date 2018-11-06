@@ -26,14 +26,14 @@ module MEMORY(
                   .memread(memread),
                   .read_data(read_data));
                   
-    MEM_WB mem_wb4 (.control_wb_in(wb_ctlout),
-                    .read_data_in(),
-                    .alu_result_in(),
-                    .write_reg_in(),
+    MEM_WB mem_wb4 (.control_wb_in(wb_ctlout),      //splits into PSrc and memreg
+                    .read_data_in(read_data),       //in from D_MEM
+                    .alu_result_in(alu_result),     //connects to mem_alu_result
+                    .write_reg_in(five_bit_muxout), //connects with mem_write_reg below
                     .regwrite(MEM_WB_regwrite),
                     .memtoreg(MEM_WB_memtoreg),
-                    .read_data(read_data),
-                    .mem_alu_result(mem_alu_result),
-                    .mem_write_reg(mem_write_reg));
+                    .read_data(read_data_in),           //goes to MUX 1
+                    .mem_alu_result(mem_alu_result),    //goes to MUX 0
+                    .mem_write_reg(mem_write_reg));     //goes to I_Decode writereg in Register
     
 endmodule
