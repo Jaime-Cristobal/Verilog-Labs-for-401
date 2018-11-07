@@ -33,9 +33,9 @@ module ID_Extend(
             #1
             wb_ctlout <= ctlwb_out;
             m_ctlout <= ctlm_out;
-            regdst <= ctlex_out[0];     //ctlex_out[2] and ctlex_out[3] were unconnected ports
-            aluop <= ctlex_out[1];      //was just ctlex_out
-            alusrc <= ctlex_out[2];
+            regdst <= ctlex_out;
+            aluop <= ctlex_out;
+            alusrc <= ctlex_out;
             npcout <= npc;
             rdata1out <= readdat1;
             rdata2out <= readdat2;

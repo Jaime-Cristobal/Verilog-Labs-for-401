@@ -26,10 +26,15 @@ module Execute(
                 .add_in2(s_extendout),         //??
                 .add_out(adder_out));
     
-    MUX3 mux3 (.y(muxout),
-               .a(instrout_1511),      //check
-               .b(instrout_2016),      //check
-               .sel(alutsrc));     //check
+    MUX3 muxToALU3 (.y(muxout),
+                    .a(s_extendout),      //check
+                    .b(rdata2),      //check
+                    .sel(alutsrc));     //check
+                    
+    MUX3 muxToPipe (.y(five_bit_muxout),
+                    .a(instrout_1511),
+                    .b(instrout_2016),
+                    .sel(regdst));
                
     ALU_Control alu_control3 (.funct(s_extendout),         //??
                               .aluop(aluop),
