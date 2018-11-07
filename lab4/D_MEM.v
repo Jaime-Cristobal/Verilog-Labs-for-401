@@ -38,7 +38,6 @@ module D_MEM(
     end
     
     always@(addr) begin
-        //finish this thread. Requires 2 if statements
         if(memwrite == 1'b1) begin      //copy contents if mem is 1
             DMEM[addr] <= write_data;
         end
