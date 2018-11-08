@@ -15,23 +15,27 @@ module D_MEM(
     initial begin
         read_data <= 0;
         
-        //init DMEM[0-5] from data.txt
-        $readmemb("data.txt", DMEM);
+        DMEM[0] = 32'b0000;
+        DMEM[1] = 32'b0001;
+        DMEM[2] = 32'b0010;
+        DMEM[3] = 32'b0011;
+        DMEM[4] = 32'b1000;
+        DMEM[5] = 32'b0101;
         
         //init DMEM[6-255] to 6-255
         for(i = 6; i < 256; i = i + 1)
             DMEM[i] = i;
-            
+                 
         //display DMEM[0-5]
         $display("From data memory (data.txt):");
         for(i = 0; i < 6; i = i + 1)
             $display("\tDMEM[%0d] = %0h", i, DMEM[i]);
-        
+            
         //display DMEM[6-9]
         $display("From data memory (initial):");
         for(i = 6; i < 10; i = i + 1)
             $display("\tDMEM[%0d] = %0d", i, DMEM[i]);
-        
+            
         //display DMEM[255]
         $display("\t...");
         $display("\tDMEM[%0d] = %0d", 255, DMEM[255]);
