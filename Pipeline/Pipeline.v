@@ -7,10 +7,10 @@ module Pipeline();
    wire MEM_PCSrc;
    wire [31:0] EX_MEM_NPC;
    
-   IFM fetch1 (.MEM_PCSrc(MEM_PCSrc),
+   IFM fetch1 (.EX_MEM_PCSrc(MEM_PCSrc),
                .EX_MEM_NPC(EX_MEM_NPC),
-               .IF_ID_instr(IF_ID_instrout),
-               .IF_ID_npc(IF_ID_npcout));
+               .IF_ID_INSTR(IF_ID_instrout),
+               .IF_ID_NPC(IF_ID_npcout));
                
    initial begin
         #24 $stop;
@@ -82,7 +82,7 @@ module Pipeline();
                     .memread(memread),
                     .memwrite(memwrite),
                     .zero(zero),
-                    .alu_resultalu_result(),
+                    .alu_result(alu_result),
                     .rdata2out(rdata2out_pipe),
                     .five_bit_muxout(five_bit_muxout),
                     .MEM_PCSrc(MEM_PCSrc),                  //Back to the MUX in IF module
@@ -91,5 +91,11 @@ module Pipeline();
                     .read_data(read_data),                  //to WB stage mux
                     .mem_alu_result(mem_alu_result),        //to WB stage mux
                     .mem_write_reg(MEM_WB_rd));             //goes to rd (write reg) in I_Decode Register
+
+    //Write Back
+    Write_Back wb5 (.memtoreg(MEM_WB_memtoreg),
+                    .mem_read_data(read_data),
+                    .mem_alu_result(mem_alu_result),
+                    .wb_data(WB_mux5_writedata));
 
 endmodule
