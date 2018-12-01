@@ -43,8 +43,8 @@ module Execute(
     ALU alu3 (.a(rdata1), 
               .b(muxout), 
               .control(control), 
-              .result(alu_result), 
-              .zero(zero));
+              .result(aluout), 
+              .zero(aluzero));
               
     Ex_Mem ex_mem3 (.ctlwb_out(wb_ctl), 
                     .ctlm_out(m_ctl), 

@@ -15,11 +15,14 @@ module D_MEM(
     initial begin
         read_data <= 0;
         
+        //  Initialize DMEM[0-5] from data.txt
+        $readmemb("data.txt",DMEM);
+        
         DMEM[0] = 32'b0000;
         DMEM[1] = 32'b0001;
         DMEM[2] = 32'b0010;
         DMEM[3] = 32'b0011;
-        DMEM[4] = 32'b1000;
+        DMEM[4] = 32'b0100;
         DMEM[5] = 32'b0101;
         
         //init DMEM[6-255] to 6-255

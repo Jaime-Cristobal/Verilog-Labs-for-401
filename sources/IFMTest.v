@@ -28,6 +28,8 @@ wire [31:0] IF_ID_INSTR;
 wire [31:0] IF_ID_NPC;
     
 //instatntiate the unit under test (uut)
+//Pipeline test();
+
 IFM uut (.EX_MEM_PCSrc(EX_MEM_PCSrc),
          .EX_MEM_NPC(EX_MEM_NPC),
          .IF_ID_INSTR(IF_ID_INSTR),

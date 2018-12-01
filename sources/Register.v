@@ -33,13 +33,12 @@ module Register (
         
         //Assign output with REG
         always @* begin
+            REG[0] <= 0;    //r0 = 0
             A <= REG[rs];
             B <= REG[rt];
             
             if(rd != 0 && regwrite)
                 REG[rd] <= writedata;
-            //else
-            //    REG[rd] <= 0;
         end
         
 endmodule

@@ -1,7 +1,6 @@
 `timescale 1ns / 1ps
 
 module Pipeline();
-
    //Instruction Fetch Module (IFM)
    wire [31:0] IF_ID_instrout, IF_ID_npcout;
    wire MEM_PCSrc;
@@ -28,6 +27,7 @@ module Pipeline();
    wire [4:0] instrout_2016, instrout_1511;
    
    I_Decode idecode2 (.IF_ID_npcout(IF_ID_npcout),
+                      .IF_ID_instrout(IF_ID_instrout),
                       .MEM_WB_rd(MEM_WB_rd),
                       .MEM_WB_regwrite(MEM_WB_regwrite),
                       .WB_mux5_writedata(WB_mux5_writedata),
@@ -97,5 +97,4 @@ module Pipeline();
                     .mem_read_data(read_data),
                     .mem_alu_result(mem_alu_result),
                     .wb_data(WB_mux5_writedata));
-
 endmodule

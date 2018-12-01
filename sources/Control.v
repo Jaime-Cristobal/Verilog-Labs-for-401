@@ -56,6 +56,9 @@ module Control (
                     end
                 default: begin
                     $display ("Opcode not recognized.");
+                    EX <= 4'b000z;
+                    M <= 3'b00z;
+                    WB <= 2'b0z;
                 end
              endcase
          end
